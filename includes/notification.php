@@ -2,7 +2,7 @@
 
 
 
-// Menu language
+
 $Dashboard		    	= "Painéis";
 $Transaction			= "Transações";
 $Incomes				= "Ganhos";
@@ -14,7 +14,7 @@ $Expenses				= "Gastos";
 $Settings				= "Configurações";
 $Logout					= "Sair (Desconectar-se)";
 
-//Pages language
+
 $Welcome				= "Bem vindo";
 $Name					= "Nome";
 $Amount					= "Quantia";
@@ -87,7 +87,7 @@ $Overall 				= "Geral";
 $CalenderIncome			= "Calendário de Receitas";
 $CalenderExpense		= "Calendário de Despesas";
 
-//MessageBox
+
 $AreYouSure				= "Tem certeza de que deseja excluir este item?";
 $ThisItem				= "Este item será removido do histórico do banco de dados.";
 $EditThisCategory		= "Editar esta Categoria?";

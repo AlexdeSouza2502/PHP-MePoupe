@@ -8,11 +8,11 @@ for($i = 1; $i <= 12; $i++) {
    echo $iDayNum = date('N', mktime(0,0,0,$i,$j,$iYear));
 
     if($iDayNum == 3) {
-      // wednesday
+      
     } elseif($iDayNum == 5) {
-      // friday
+      
     } elseif($iDayNum == 1) {
-      // monday
+      
     }
   }
 }

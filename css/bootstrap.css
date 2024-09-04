@@ -1,10 +1,4 @@
-/*!
- * Bootstrap v3.2.0 (http://getbootstrap.com)
- * Copyright 2011-2014 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
 
-/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -2934,8 +2928,8 @@ fieldset[disabled] .btn-info.active {
 }
 .btn-warning {
   color: #fff;
-  background-color: #f0ad4e;
-  border-color: #eea236;
+  background-color: #42ca49;
+  border-color: #42ca49;
 }
 .btn-warning:hover,
 .btn-warning:focus,
@@ -2943,8 +2937,8 @@ fieldset[disabled] .btn-info.active {
 .btn-warning.active,
 .open > .dropdown-toggle.btn-warning {
   color: #fff;
-  background-color: #ec971f;
-  border-color: #d58512;
+  background-color: #42ca49;
+  border-color: #42ca49;
 }
 .btn-warning:active,
 .btn-warning.active,
@@ -2966,11 +2960,11 @@ fieldset[disabled] .btn-warning:active,
 .btn-warning.disabled.active,
 .btn-warning[disabled].active,
 fieldset[disabled] .btn-warning.active {
-  background-color: #f0ad4e;
-  border-color: #eea236;
+  background-color: #42ca49;
+  border-color: #42ca49;
 }
 .btn-warning .badge {
-  color: #f0ad4e;
+  color: #42ca49;
   background-color: #fff;
 }
 .btn-danger {
@@ -5211,22 +5205,22 @@ a.list-group-item-danger.active:focus {
   border-bottom-color: #ddd;
 }
 .panel-primary {
-  border-color: #428bca;
+  border-color: #42ca49;
 }
 .panel-primary > .panel-heading {
   color: #fff;
-  background-color: #428bca;
-  border-color: #428bca;
+  background-color: #59eb78;
+  border-color: #42ca49;
 }
 .panel-primary > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #428bca;
+  border-top-color: #42ca49;
 }
 .panel-primary > .panel-heading .badge {
-  color: #428bca;
+  color: #42ca49;
   background-color: #fff;
 }
 .panel-primary > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #428bca;
+  border-bottom-color: #42ca49;
 }
 .panel-success {
   border-color: #d6e9c6;
@@ -5250,7 +5244,7 @@ a.list-group-item-danger.active:focus {
   border-color: #bce8f1;
 }
 .panel-info > .panel-heading {
-  color: #31708f;
+  color: #42ca49;
   background-color: #d9edf7;
   border-color: #bce8f1;
 }

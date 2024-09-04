@@ -1,22 +1,22 @@
 <?php
 
 session_start();
-//Include Database
+
 
 include('db.php');
-//Include Functions
+
 include('Functions.php');
 
-//Include Notifications
+
 include ('notification.php');
 
-// Get User Info
+
 $UserId=$_SESSION['UserId'];
 $GetUserInfo = "SELECT * FROM user WHERE UserId = $UserId";
 $UserInfo = mysqli_query($mysqli, $GetUserInfo);
 $ColUser = mysqli_fetch_assoc($UserInfo);
 	
-// fetch data to calender
+
 $query 				   = "select * from assets where UserId = $UserId ";
 $assetstocalender      = mysqli_query($mysqli, $query);
 $events = array();
@@ -36,6 +36,6 @@ while ($row = mysqli_fetch_assoc($assetstocalender)) {
 }
 $eventsArray['sum'] = $sum;
 echo json_encode($events);	
-//echo $sum;	
+
 	
 ?>

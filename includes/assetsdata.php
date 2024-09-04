@@ -1,22 +1,17 @@
 	<?php
 
-	/* Array of database columns which should be read and sent back to DataTables. Use a space where
-	 * you want to insert a non-database field (for example a counter or static image)
-	 */
+	
 	$aColumns = array( 'Title', 'Date', 'CategoryId', 'AccountId', 'Amount','Description');
 	
-	/* Indexed column (used for fast and accurate table cardinality) */
+	
 	$sIndexColumn = "AssetsId";
 	
-	/* DB table to use */
+	
 	$sTable = "assets";
 	
-	/* Include Database connection */
+	
 	include 'db.php';
 	
-	/* 
-	 * Paging
-	 */
 	$sLimit = "";
 	if ( isset( $_GET['iDisplayStart'] ) && $_GET['iDisplayLength'] != '-1' )
 	{
@@ -25,9 +20,7 @@
 	}
 	
 	
-	/*
-	 * Ordering
-	 */
+	
 	if ( isset( $_GET['iSortCol_0'] ) )
 	{
 		$sOrder = "ORDER BY  ";
@@ -48,7 +41,7 @@
 	}
 	
 	
-	// Filtering
+	
 	$sWhere = "";
 	if ( $_GET['sSearch'] != "" )
 	{
@@ -61,7 +54,7 @@
 		$sWhere .= ')';
 	}
 	
-	/* Individual column filtering */
+	
 	for ( $i=0 ; $i<count($aColumns) ; $i++ )
 	{
 		if ( $_GET['bSearchable_'.$i] == "true" && $_GET['sSearch_'.$i] != '' )
@@ -79,10 +72,7 @@
 	}
 	
 	
-	/*
-	 * SQL queries
-	 * Get data to display
-	 */
+	
 	$sQuery = "
 		SELECT * from assets
 		$sWhere
@@ -91,7 +81,7 @@
 	";
 	$rResult = mysqli_query($mysqli,$sQuery) or die(mysqli_error());
 	
-	/* Data set length after filtering */
+	
 	$sQuery = "
 		SELECT FOUND_ROWS()
 	";
@@ -99,7 +89,7 @@
 	$aResultFilterTotal = mysqli_fetch_array($rResultFilterTotal);
 	$iFilteredTotal = $aResultFilterTotal[0];
 	
-	/* Total data set length */
+	
 	$sQuery = "
 		SELECT COUNT(".$sIndexColumn.")
 		FROM   $sTable
@@ -109,9 +99,7 @@
 	$iTotal = $aResultTotal[0];
 	
 	
-	/*
-	 * Output
-	 */
+	
 	$output = array(
 		"sEcho" => intval($_GET['sEcho']),
 		"iTotalRecords" => $iTotal,

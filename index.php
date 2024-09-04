@@ -1,6 +1,6 @@
 <?php session_start();
 
-// Cek Active Link
+
 function ActiveClass($requestUri)
 {
     $current_file_name = basename($_SERVER['REQUEST_URI'], ".php");
@@ -9,13 +9,13 @@ function ActiveClass($requestUri)
         echo 'class="active"';
 }
 		
-		//check already login
+		
 		if (!isset($_SESSION['UserId'])) {
 			header ('Location: login.php');
 			exit;
 		}
 
-		// Logout
+		
 		if (isset($_GET['action'])) {
 			$action = $_GET['action'];
 			if ($action == 'logout') {
@@ -25,7 +25,7 @@ function ActiveClass($requestUri)
 		}
 
 
- //Link to page
+ 
 if (isset($_GET['page']) && $_GET['page'] == 'Transaction') {
             $page = 'Transaction';
         
@@ -68,21 +68,21 @@ if (isset($_GET['page']) && $_GET['page'] == 'Transaction') {
 
 
 
-//get global notification
+
 include('includes/global.php');
 
-//Get Header
+
 include('includes/header.php'); 
 echo"hello";
 
-//set global message notification
+
 $msgBox	="";
 
 if (file_exists('pages/'.$page.'.php')) {
-            // Load the Page
+            
             include('pages/'.$page.'.php');
         } else {
-            // Else Display an Error
+            
           
             echo '
                     <div class="wrapper">
